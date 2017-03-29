@@ -1,0 +1,37 @@
+# Built application files
+/*/build/
+
+# Crashlytics configuations
+com_crashlytics_export_strings.xml
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Gradle generated files
+.gradle/
+
+# Signing files
+.signing/
+
+# User-specific configurations
+CriminalIntent/.idea/libraries/
+CriminalIntent/.idea/workspace.xml
+CriminalIntent/.idea/tasks.xml
+CriminalIntent/.idea/.name
+CriminalIntent/.idea/compiler.xml
+CriminalIntent/.idea/copyright/profiles_settings.xml
+CriminalIntent/.idea/encodings.xml
+CriminalIntent/.idea/misc.xml
+CriminalIntent/.idea/modules.xml
+CriminalIntent/.idea/scopes/scope_settings.xml
+CriminalIntent/.idea/vcs.xml
+CriminalIntent/*.iml
+
+# OS-specific files
+CriminalIntent/.DS_Store
+CriminalIntent/.DS_Store?
+CriminalIntent/._*
+CriminalIntent/.Spotlight-V100
+CriminalIntent/.Trashes
+CriminalIntent/ehthumbs.db
+CriminalIntent/Thumbs.db
