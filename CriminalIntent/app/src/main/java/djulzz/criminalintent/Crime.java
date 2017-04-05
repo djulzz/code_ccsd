@@ -13,7 +13,7 @@ public class Crime {
     private Date mDate;
     private boolean mSolved;
 
-    public UUID getmId() {
+    public UUID getId() {
         return mId;
     }
 

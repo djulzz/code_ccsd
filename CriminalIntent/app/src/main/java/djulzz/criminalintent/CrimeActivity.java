@@ -2,6 +2,7 @@ package djulzz.criminalintent;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
@@ -17,5 +18,6 @@ public class CrimeActivity extends AppCompatActivity {
 
         // from android.support.v4
         FragmentManager fm = getSupportFragmentManager();
+        Fragment fragment = fm.findFragmentById(R.id.fragment_container);
     }
 }
