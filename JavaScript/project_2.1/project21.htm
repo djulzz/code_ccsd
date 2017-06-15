@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style21.css">
+
+</head>
+<body>
+<h1><u>Project 2.1</u></h1>
+<p>
+<ul>
+	<li>Create a Web page with five text boxes.</li>
+	<li> Assign to each text box’s value attribute a value of zero.</li>
+	<li>Add to each of the text boxes an <strong>onchange</strong> event handler that calls a function named <strong>calcAvg()</strong> and passes to the function the value of that text box by referencing its document object, form name, and name and value attributes.
+	<li>Within the calcAvg() function, pass the five parameters to another function, named <strong>performCalc()</strong>, and assign the return value to a variable named <strong>calcResult</strong>, then place the returned value to another text box with a name attribute of <strong>averageResult</strong>.</li>
+	<li>In the performCalc() function, calculate the average of the five numbers (by adding the five values and dividing by five), then return the result to the calcAvg() function.</li>
+	<li>When you perform the calculation, use the <strong>parseInt()</strong> function to ensure that the passed values are calculated as numbers. Save the document as <strong>CalcAverage.html</strong>.</li>
+</ul>
+</p>
+<script type="text/javascript">
+	////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////
+	function performCalc(in1, in2, in3, in4, in5 )
+	{
+		var result = ( in1 + in2 + in3 + in4 + in5 ) / 5;
+		return result;
+	}
+
+	////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////
+	function calcAvg()
+	{
+
+		var i1 = document.getElementById( "i1" );
+		var i2 = document.getElementById( "i2" );
+		var i3 = document.getElementById( "i3" );
+		var i4 = document.getElementById( "i4" );
+		var i5 = document.getElementById( "i5" );
+
+		var v1 = parseInt( i1.value );
+		var v2 = parseInt( i2.value );
+		var v3 = parseInt( i3.value );
+		var v4 = parseInt( i4.value );
+		var v5 = parseInt( i5.value );
+
+		var calcResult = performCalc( v1, v2, v3, v4, v5 );
+
+		document.getElementById( "averageResult" ).value = calcResult.toString();
+
+	}
+</script>
+<form id="f1">
+	<table>
+		<tr>
+			<td><input type="number" name="i1" id="i1" value="0" onchange="calcAvg()"></td>
+			<td><input type="number" name="i2" id="i2" value="0" onchange="calcAvg()"></td>
+			<td><input type="number" name="i3" id="i3" value="0" onchange="calcAvg()"></td>
+			<td><input type="number" name="i4" id="i4" value="0" onchange="calcAvg()"></td>
+			<td><input type="number" name="i5" id="i5" value="0" onchange="calcAvg()"></td>
+		</tr>
+	</table>
+	<br/>
+	Average = <input type="number" name="averageResult" id="averageResult" readonly="readonly">
+</form>
+</body>
+</html>
