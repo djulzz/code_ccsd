@@ -14,13 +14,23 @@
 	 *    Maybe returning a value
 	 }
 	 */
+
+	 function clear_w()
+	 {
+	 	document.getElementById( "w" ).value = "";
+	 }
+
+	 function clear_h()
+	 {
+	 	document.getElementById( "h" ).value = "";
+	 }
 	</script>
 </head>
 <body>
 <form>
-	Weight (in lbs)<input type="text" name="w" id="w">
+	Weight (in lbs)<input type="text" name="w" class="input" id="w" onfocus="clear_w( )">
 	<br/>
-	Height (in ft)<input type="text" name="h" id="h">
+	Height (in ft)<input type="text" name="h" class="input" id="h" onfocus="clear_h()">
 	<br/>
 	<input type="button" name="b" id="b" value="Calculate BMI" onclick="CalculateBMI()">
 	<br/>
