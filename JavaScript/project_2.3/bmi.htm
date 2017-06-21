@@ -15,22 +15,35 @@
 	 }
 	 */
 
-	 function clear_w()
+	 function clearQ(p)
 	 {
-	 	document.getElementById( "w" ).value = "";
+	 	//window.alert(p);
+	 	if( p == 1 )
+	 		document.getElementById( "w" ).value = "";
+	 	else if( p == 2 )
+	 		document.getElementById( "h" ).value = "";
 	 }
 
-	 function clear_h()
-	 {
-	 	document.getElementById( "h" ).value = "";
-	 }
+	// function reset( id )
+	// {
+	//  	if( id == "w" ) {
+	//  		window.alert( "Using W");
+	//  		document.getElementById( "w" ).value = "";
+	//  	}
+	//  	else if( id == "h" ) {
+	//  		document.getElementById( "h" ).value = "";
+	//  		window.alert( "Using H");
+	//  	}
+	// }
+
 	</script>
+
 </head>
 <body>
 <form>
-	Weight (in lbs)<input type="text" name="w" class="input" id="w" onfocus="clear_w( )">
+	Weight (in lbs)<input type="text" name="w" class="input" id="w" onfocus="var p=1;clearQ(p)">
 	<br/>
-	Height (in ft)<input type="text" name="h" class="input" id="h" onfocus="clear_h()">
+	Height (in ft)<input type="text" name="h" class="input" id="h" onfocus="var p=2;clearQ(p)">
 	<br/>
 	<input type="button" name="b" id="b" value="Calculate BMI" onclick="CalculateBMI()">
 	<br/>
