@@ -9,7 +9,15 @@
 			w = document.getElementById( "w" ).value;
 			h = document.getElementById( "h" ).value;
 
-			window.alert( "Your weight is " + w );
+			w = parseInt( w );
+			h = parseInt( h );
+			var bmi = ( w * 703 ) / ( h * h * 144 );
+			
+			var bmi_as_string = bmi.toString();
+			document.getElementById( "r" ).value = bmi_as_string;
+
+			document.getElementById( "p1").value = "Something Else";
+			//window.alert( bmi_as_string );
 		}
 	</script>
 </head>
@@ -19,9 +27,13 @@
 	<br/>
 	Height (in ft)<input type="text" name="h" id="h">
 	<br/>
-	<input type="button" name="b" id="b" value="Calculate BMI" onclick="CalculateBMI()">
+	<input type="button" name="b" id="b" value="Calculate BMI" onmouseover="CalculateBMI()">
 	<br/>
-	Your BMI is <input type="text" name="r" id="r">
+	Your BMI is <input type="text" name="r" id="r" value="0">
 </form>
+
+
 </body>
+
+
 </html>
