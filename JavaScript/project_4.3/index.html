@@ -2,10 +2,21 @@
 <html>
 <head>
 	<title></title>
+	<script type="text/javascript">
+		function EmphasizeJoin()
+		{
+			document.images[0].src="join2.gif";
+		}
+
+		function DeEmphasizeJoin()
+		{
+			document.images[0].src="join1.gif";
+		}
+	</script>
 </head>
 <body>
-<!-- 	This is inline JavaScript! -->
-	<a onmouseover="document.images[0].src='join2.gif'" onmouseout="document.images[0].src='join1.gif'">
+
+	<a onmouseover="EmphasizeJoin()" onmouseout="DeEmphasizeJoin()">
 		<img src="join1.gif">
 	</a>
 </body>

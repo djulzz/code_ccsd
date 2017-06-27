@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="myCss.css">
+	<script type="text/javascript">
+		function TranslateResultCode( result_code )
+		{
+			switch( result_code ) {
+				case 1 : { document.getElementById("res" ).value = "You can divide by 400, you have a leap year"; } break;
+				case 2 : { document.getElementById("res" ).value = "You can divide by 100 and 4, but not by 400, so this is not a leap year"; } break;
+				case 3 : { document.getElementById("res" ).value = "You can divide by 4, but not by 100, so you do have a leap year"; } break;
+				case 4 : { document.getElementById("res" ).value = "You can't even be divided by 4, no leap year"; } break;
+				default: { document.getElementById("res" ).value = "This should not happen" ; break; }
+			}
+		}
+		function CheckIfLeap()
+		{
+			var result_code = 0;
+			var year = parseInt( document.getElementById( "year").value );
+			var test_if_divided_by_4 = ( ( year % 4 ) == 0 );
+			window.alert( typeof test_if_divided_by_4 );
+			if( true == test_if_divided_by_4 )
+			{
+				
+
+				var test_if_divided_by_100 = ( ( year % 100 ) == 0 );
+				if( true == test_if_divided_by_100 ) {
+					var test_if_divided_by_400 = ( ( year % 400 ) == 0 );
+					if( true == test_if_divided_by_400 ) {
+						result_code = 1;
+						TranslateResultCode( result_code );
+					} else {
+						result_code = 2;
+						TranslateResultCode( result_code );
+					}
+				} else {
+					result_code = 3;
+					TranslateResultCode( result_code );
+				}
+			} else {
+				result_code = 4;
+				TranslateResultCode( result_code );
+			}
+		}
+	</script>
+</head>
+<body>
+	<form>
+		Enter a Year:<input type="number" value="0" id="year" onchange="CheckIfLeap()">
+		<br/>
+		<input type="text" id="res">
+	</form>
+</body>
+</html>
