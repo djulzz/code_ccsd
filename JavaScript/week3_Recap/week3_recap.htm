@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function AddOne( input )
+		{
+			var result = input + 1;
+			return result;
+		}
+
+	</script>
+</head>
+<body>
+<script type="text/javascript">
+	var a = 0;
+	var a_plus_one = AddOne( a );
+	document.write( "The result of call AddOne with the variable a is: " + a_plus_one + "<br/>");
+
+	var someInt = 5;
+	if( someInt > 5 ) {
+		document.write("someInt is greater than 5 <br/>");
+	} else {
+		document.write("someInt is either equal to or less than five <br/>");
+	}
+	var heartRate = 67;
+	var diagnostic = 0;
+	if( ( heartRate > 50 ) && ( heartRate < 157) ) {
+		diagnostic = 1;
+		
+	}
+	else {
+		diagnostic = 2;
+		
+	}
+
+	var verbosity = 1;
+	switch( diagnostic )
+	{
+		case 1 :
+		{
+			document.write( "Your heart is healthy<br/>");
+			if( verbosity == 1 )
+			{
+				for( var i = 1; i < 5; i++ ) {
+					document.write( "This is because for your age you fall withing the AHA recommendations for healthy heart<br/>");
+				}
+			}
+		} break;
+		case 2 : { document.write( "You may want to consider checking in with a doctor<br/>");} break;
+		default: break;
+	}
+</script>
+</body>
+</html>
