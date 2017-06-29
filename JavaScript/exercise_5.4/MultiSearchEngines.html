@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script type="text/javascript">
+		function GetSelection()
+		{
+			var v = document.theForm.numbers.selectedIndex;
+			if( v== -1 ) {
+				window.alert( "You must select an entry from the drop down menu");
+			}
+			///window.alert( "The index selection is = " + v );
+			//document.forms[0]
+		}
+
+		function InitializeSelect()
+		{
+			document.theForm.numbers.selectedIndex = -1;
+		}
+	</script>
+</head>
+<body onload="InitializeSelect()">
+
+<form name="theForm">
+	<select name = "numbers">
+  		<option value="v1">1</option>
+  		<option value="v2">2</option>
+  		<option value="v3">3</option>
+  		<option value="v4">4</option>
+	</select>
+
+	<input type="button" name="theButton" id="b" onclick="GetSelection()" value="Click Me!">
+</form>
+</body>
+</html>
