@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<script type="text/javascript" src="myscripts.js">
+	</script>
+
+	<script type="text/javascript">
+		function ValidateSelection()
+		{
+			var v1 = window.document.f1.selection.selectedIndex;
+			if( v1 == -1 ) {
+				window.alert( "You select nothing - Aborting");
+			} else {
+				window.alert( "Good Job - You've made your selection");
+			}
+		}
+	</script>
+
+	<script type="text/javascript">
+		function RemoveFromLeftAndAddToRight()
+		{
+			var selectedIndex = window.document.project54.left.selectedIndex;
+
+			var value = window.document.project54.left.options[ selectedIndex ].value;
+
+			var text = window.document.project54.left.options[ selectedIndex ].innerHTML;
+
+			var NewOption = window.document.createElement( "option" );
+			NewOption.text = value;
+
+			window.document.project54.left.remove(selectedIndex);
+			window.document.project54.right.add( NewOption );
+
+		}
+	</script>
+</head>
+<body onload="InitSelection()">
+<form name="f1">
+	<select name="selection" onchange="updateSelection()">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+	</select>
+	<br/>
+	<input type="button" name="the_button" value="validate Selection" onclick="ValidateSelection()">
+</form>
+
+<form name="project54">
+	<table>
+		<tr>
+			<td>
+				<select name="left" size="10">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+			</td>
+			<td>
+				<input type="button" name="b1" value=">>">
+				<br/>
+				<input type="button" name="b2" value="<<">
+			</td>
+			<td>
+				<select name="right" size="10">
+				</select>
+			</td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
