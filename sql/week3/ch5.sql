@@ -18,7 +18,7 @@
  -- select b.book_code, b.title, i.on_hand from book b, inventory i
  --  where ( b.book_code = i.book_code ) and ( i.branch_num = 3 ); 
 
--- Q5
+-- Q5 5. Too easy
 
 -- Q6
 -- This is joining 3 tables together
@@ -32,7 +32,10 @@
 
 -- Q7
 -- This is using the exists operator to get the same results as
--- in Q6 - To be continued
+-- in Q6
+select title from book where exists 
+( select * from wrote where
+ (author_num = 18 ) and ( book.book_code = wrote.book_code ) );
 
 -- Q8
 -- select b.book_code, title from wrote w, book b, inventory i
