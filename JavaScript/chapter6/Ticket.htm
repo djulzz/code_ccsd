@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+
+
+		function ConcertTickets( customerName, event, quantity, eventDate )
+		{
+			this.customerName = customerName; // customer name
+			this.concertName = event;
+			this.ticketQuantity = quantity;
+			this. concertDate = eventDate;
+
+			// Method to Object binding - 
+			// Because JS does not allow to defines actual classes,
+			// we have to first define a method, and then bind it to
+			// the related constructor using the following construct
+			this.GetCustomerName 	= GetCustomerName;
+			this.GetConcertName 	= GetConcertName;
+			this.GetTicketQuantity 	= GetTicketQuantity;
+			this.GetConcertDate 	= GetConcertDate;
+		}
+
+		function GetConcertDate()
+		{
+			return this.concertDate;
+		}
+
+		function GetTicketQuantity()
+		{
+			return this.ticketQuantity;
+		}
+
+		function GetConcertName()
+		{
+			return this.concertName;
+		}
+
+		function GetCustomerName()
+		{
+			return this.customerName;
+		}
+
+		// function HeartRateRecommendation( age )
+		// {
+		// 	var maximumHeartRate = 220 - age;
+		// 	this.minimum = maximumHeartRate * 0.5;
+		// 	this.maximum = maximumHeartRate * 0.85;
+		// }
+
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		var ticketOrder = new ConcertTickets();
+		ticketOrder.customerName = "Julien Esposito";
+		document.write( ticketOrder.GetCustomerName() + "<br/>");
+		// document.write( ticketOrder.customerName + "<br/>");
+		// for( prop in ticketOrder )
+		// {
+		// 	document.write( prop + "<br/>" );
+		// }
+
+		// var hrRecom = new HeartRateRecommendation( 35 );
+		// var hrRecom2 = new HeartRateRecommendation( 20 );
+	</script>
+</body>
+</html>

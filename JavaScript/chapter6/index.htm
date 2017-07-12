@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function ConcertTicket( cutomer, event, quantity, eventDate ) {
+			this.cutomerName 	= 	 customer;
+			this.concertName 	=	 event;
+			this.ticketQuantity 	=	 quantity;;
+			this.concertDate  = 	 eventDate;
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		var ticketOrder = new ConcertTicket();
+		ticketOrder.cutomerName = "Julien Esposito"; // string
+		ticketOrder.concertDate = new Date( 2017, 7, 5 ); // Date
+		ticketOrder.ticketQuantity = 2; // number
+		ticketOrder.concertName = "Warpt Tour";
+	</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+	////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////
+	function AHARateCalculator( age_in )
+	{
+		this.age = age_in;
+		this.maximumHeartRate = 220 - this.age;
+		this.minimumRecommended = 0.5 * this.maximumHeartRate;
+		this.maximumRecommended = 0.85 * this.maximumHeartRate;
+
+		this.getMinimumRecommended = getMinimumRecommended;
+		this.getMaximumRecommended = getMaximumRecommended;
+	}
+
+	////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////
+	function getMinimumRecommended()
+	{
+		return this.minimumRecommended;
+	}
+
+	////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////
+	function getMaximumRecommended()
+	{
+		return this.maximumRecommended;
+	}
+
+	////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////
+	function UpdateHR()
+	{
+		var age = parseFloat( document.theForm.age.value );
+		var age = parseFloat( document.getElementById( "age_id" ).value );
+		var heartRateCalculator = new AHARateCalculator( age );
+		var min = heartRateCalculator.getMinimumRecommended();
+		var max = heartRateCalculator.getMaximumRecommended();
+		var min = heartRateCalculator.minimumRecommended;
+		//window.alert( min + "  -  " + max );
+		document.getElementById( "res_min" ).value = min.toString();
+		document.getElementById( "res_max" ).value = max.toString();
+		// window.alert( typeof document.min );
+		document.getElementById( "min").innerHTML = min.toString();
+		document.getElementById( "max").innerHTML = max.toString();
+		// document.min.innerHTML = min.toString();
+		// document.max.innerHTML = max.toString();
+	}
+	</script>
+</head>
+<body>
+
+<h1>American Heart Association - Object - Oriented</h1>
+<form name="theForm">
+	Enter you age:<input type="number" name="age" id="age_id">
+	<br/>
+	<input type="button" name="button" value="Calculate" onclick="UpdateHR()">
+	<br/>
+	<input type="text" id="res_min" readonly="readonly">
+	<br/>
+	<input type="text" id="res_max" readonly="readonly">
+</form>
+Your heart rate must be between <section id="min" name="min"></section> and <section name="max" id="max"></section>
+</body>
+</html>

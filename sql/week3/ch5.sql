@@ -33,9 +33,9 @@
 -- Q7
 -- This is using the exists operator to get the same results as
 -- in Q6
-select title from book where exists 
-( select * from wrote where
- (author_num = 18 ) and ( book.book_code = wrote.book_code ) );
+-- select title from book where exists 
+-- ( select * from wrote where
+--  (author_num = 18 ) and ( book.book_code = wrote.book_code ) );
 
 -- Q8
 -- select b.book_code, title from wrote w, book b, inventory i
