@@ -1,0 +1,13 @@
+C:\Users\Esposito\Documents\GitHub\PRG_410\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Esposito\Documents\GitHub\PRG_410\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Esposito\Documents\GitHub\PRG_410\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Esposito\Documents\GitHub\PRG_410\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Esposito\Documents\GitHub\PRG_410\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Esposito\Documents\GitHub\PRG_410\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Esposito\Documents\GitHub\code_ccsd\Database_Development\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Esposito\Documents\GitHub\code_ccsd\Database_Development\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Esposito\Documents\GitHub\code_ccsd\Database_Development\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Esposito\Documents\GitHub\code_ccsd\Database_Development\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Esposito\Documents\GitHub\code_ccsd\Database_Development\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Esposito\Documents\GitHub\code_ccsd\Database_Development\ConsoleApplication1\ConsoleApplication1\bin\Debug\MySql.Data.dll
+C:\Users\Esposito\Documents\GitHub\code_ccsd\Database_Development\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
