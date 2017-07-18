@@ -16,7 +16,7 @@ public class TableObject
         m_Name = name;
     }
 
-    String m_Name;
+    private String m_Name;
 
     public String Name
     {
