@@ -23,6 +23,11 @@ namespace ConsoleApplication1
 
         }
 
+        public void CreateTable( ref MySqlConnection connection )
+        {
+
+        }
+
         // This is the useful Constructor
         public Configuration_Parameters( String configFileName )
         {
@@ -55,6 +60,8 @@ namespace ConsoleApplication1
                 if( connection.State == System.Data.ConnectionState.Open )
                 {
                     Console.WriteLine("Connection Open");
+                    String QueryString = "SELECT * FROM Book;";
+                   // MySqlCommand cmd = new MySqlCommand( )
                 } else
                 {
                     Console.WriteLine("Connection could not be opened - Aborting...");

@@ -1,0 +1,9 @@
+﻿body {
+    background-color: black;
+    color: white;
+}
+
+
+#db_selected {
+    color: red;
+}
